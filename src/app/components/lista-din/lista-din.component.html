@@ -1,0 +1,9 @@
+<h1>Lista com ação dinamica</h1>
+<ul>
+@for (tarefa of tarefas; track $index) {
+    <li>{{tarefa}}- {{$index}} 
+    <button (click)="deletar($index)">excluir</button>
+    </li>
+
+}
+</ul>

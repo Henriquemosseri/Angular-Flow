@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<label for="">Email <input type="email" id="email"></label>
+<label for="">Senha <input type="text" id="senha"></label>
+<input type="button" value="enviar" (click)="validacao()">
+@if (email==="" || senha==="") {
+    <p>Campos Obrigatorios</p>
+}
+@else if(email.length<6 || !email.includes("@")) {
+    <p> Credenciais inválidas</p>    
+}
+@else {
+    <p>login bem sucedido</p>
+}
+
+
+

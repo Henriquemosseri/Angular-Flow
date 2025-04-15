@@ -1,0 +1,8 @@
+<h1>Lista dinamica</h1>
+<ul>
+    @for (item of itens; track $index) {
+        <li>{{item}}- {{$index}}</li>
+    } @empty {
+        <li>A lista está vazia</li>
+    }
+</ul>

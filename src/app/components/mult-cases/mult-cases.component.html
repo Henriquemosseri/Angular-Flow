@@ -1,0 +1,21 @@
+<h1>Switch multiplos casos</h1>
+
+<select [(ngModel)]="statusAtual">
+    <option [value]="statusEnum.Pendente">Pendente</option>
+    <option [value]="statusEnum.Enviado">Enviado</option>
+    <option [value]="statusEnum.Entregue">Entregue</option>
+</select>
+@switch (statusAtual) {
+    @case(statusEnum.Pendente){
+        <p>Aguardando confirmação</p>
+    }
+    @case(statusEnum.Enviado){
+        <p>Pedido a caminho</p>
+    }
+    @case(statusEnum.Entregue){
+        <p>Pedido entregue</p>
+    }
+    @default {
+        <p>Status desconhecido</p>
+    }
+}
